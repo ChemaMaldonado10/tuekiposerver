@@ -13,7 +13,8 @@ router.get("/users", (req, res) => {
         if (err) {
             return res.status(500).json({
                 state: false,
-                message: "Internal Server Error"
+                message: "Internal Server Error",
+                err: err
             });
         } else {
             return res.status(200).json({
